@@ -4,8 +4,10 @@
   </ion-nav-buttons>
   <ion-content class="has-header">
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
+      <ion-item ng-repeat="playlist in paperlists" href="#/app/playlists/{{playlist.papel}}">
+        {{playlist.papel}}
+        <span class="badge badge-assertive" ng-if="playlist.status == '-'">{{playlist.valor}}</span>
+        <span class="badge badge-balanced" ng-if="playlist.status == '#'">{{playlist.valor}}</span>
       </ion-item>
     </ion-list>
   </ion-content>

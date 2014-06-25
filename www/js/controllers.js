@@ -44,5 +44,12 @@ angular.module('starter.controllers', [])
   ];
 })
 
+.controller('PaperlistsCtrl', function($scope, $http) {
+  $http.get('http://localhost:3001/api/cotacoes').
+    success(function(data, status, headers, config) {
+      $scope.paperlists = data;
+    });
+})
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 })
